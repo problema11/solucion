@@ -67,8 +67,21 @@ public class EmpTrans {
         }
         return cad.toString();
     }
-     
-    
+   //Inciso 2  
+     public String buscaEscolares(int totalNiños, int cantCamiones){
+        int contador=0;
+        String resp="No es posible satisfacer la demanda";
+        
+        for(int i=0; i<totalCam; i++){
+            if(camiones[i] instanceof Escolar && ((Escolar)camiones[i]).getMaxNiños()>=cantCamiones){
+                contador++;
+            }
+        }
+        if(contador>=cantCamiones){
+            resp="Si es posible satisfacer la demanda";
+        }
+        return resp;
+    }
     
     
 }
