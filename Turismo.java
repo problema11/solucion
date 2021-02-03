@@ -24,6 +24,7 @@ public class Turismo extends DePasajeros{
         this.serviBar = serviBar;
     }
     
+    @Override
     public double calculaCostoServicio(double cantKm){
         double costo;
         
