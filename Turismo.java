@@ -23,44 +23,34 @@ public class Turismo extends DePasajeros{
         this.asientoCama = asientoCama;
         this.serviBar = serviBar;
     }
-
-    @Override
-    public String toString() {
-        String cad="";
-        if (serviBar==true && asientoCama==true){
-            cad=super.toString()+ "\nAsientocama: " + "Sí" + "\nServiBar: " + "Sí";
-        }
-        else if (serviBar==true && asientoCama!=true){
-            cad=super.toString()+ "\nAsientocama: " + "No" + "\nServiBar: " + "Sí";
-        }
-        else if (serviBar!=true && asientoCama==true){
-            cad=super.toString()+ "\nAsientocama: " + "Sí" + "\nServiBar: " + "No";
-        }
-        else if (serviBar!=true && asientoCama!=true){
-            cad=super.toString()+ "\nAsientocama: " + "No" + "\nServiBar: " + "No";
-        }
-        
-        return  cad;
-    }
     
     public double calculaCostoServicio(double cantKm){
         double costo;
-        if (asientoCama==true && serviBar==true){
-            costo=super.calculaCostoServicio(cantKm);
-            costo=(costo*.05)*.05;
-        }
-        else if (asientoCama==true || serviBar==true){
-            costo=super.calculaCostoServicio(cantKm);
-            costo=costo*.05;
-        }
-        else{
-            costo=super.calculaCostoServicio(cantKm);
-        }
+        
+        costo=super.calculaCostoServicio(cantKm);
+        if (asientoCama && serviBar)
+            costo+=costo*0.1;
+        else 
+            if(asientoCama || serviBar)
+                costo+=costo*0.05;
+        
         return costo;
-    }    
+    }  
     
-    
-    
-
-    
+        public String toString(){
+        StringBuilder cad=new StringBuilder();
+        
+        cad.append(super.toString());
+        if(this.asientoCama)
+            cad.append("Cuenta con asientos cama\n");
+        else
+            cad.append("No cuenta con asientos cama\n");
+        if(this.serviBar)
+            cad.append("Cuenta con serviBar\n");
+        else
+            cad.append("No cuenta con serviBar\n");
+        
+        return cad.toString();    
+    }
+  
 }
