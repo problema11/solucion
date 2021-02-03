@@ -37,7 +37,7 @@ public class Turismo extends DePasajeros{
         return costo;
     }  
     
-        public String toString(){
+    public String toString(){
         StringBuilder cad=new StringBuilder();
         
         cad.append(super.toString());
