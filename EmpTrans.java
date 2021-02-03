@@ -69,12 +69,12 @@ public class EmpTrans {
     }
     
    //Inciso 2  
-    public String buscaEscolares(int totalNiños, int cantCamiones){
+    public String buscaEscolares(int totalNinos, int cantCamiones){
         int contador=0;
         String resp="No es posible satisfacer la demanda";
         
         for(int i=0; i<totalCam; i++){
-            if(camiones[i] instanceof Escolar && ((Escolar)camiones[i]).getMaxNiños()>=cantCamiones){
+            if(camiones[i] instanceof Escolar && ((Escolar)camiones[i]).getMaxNinos()>=cantCamiones){
                 contador++;
             }
         }
