@@ -27,13 +27,6 @@ public abstract class Camion {
         this.costoCamion = costoCamion;
     }
 
-    @Override
-    public String toString() {
-        return "\nCamion: " + "\nMarca: " + marca + 
-                "\nNúmero de motor: " + numMotor + "\nPlacas: " + placas+
-                "\nCosto del camión: $"+costoCamion;
-    }
-
     public String getMarca() {
         return marca;
     }
@@ -49,7 +42,17 @@ public abstract class Camion {
     public double getCostoCamion() {
         return costoCamion;
     }
-    
+
+   public String toString(){
+        StringBuilder cad=new StringBuilder();
+        
+        cad.append("Marca: "+marca+"\n");
+        cad.append("Numero de motor: "+numMotor+"\n");
+        cad.append("Placas: "+placas+"\n");
+        cad.append("Costo del camión: "+costoCamion+"\n");
+        
+        return cad.toString();
+    }    
 
     @Override
     public boolean equals(Object obj) {
