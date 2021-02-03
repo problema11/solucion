@@ -62,8 +62,9 @@ public class EmpTrans {
         }
         return cad.toString();
     }
+    
    //Inciso 2  
-     public String buscaEscolares(int totalNiños, int cantCamiones){
+    public String buscaEscolares(int totalNiños, int cantCamiones){
         int contador=0;
         String resp="No es posible satisfacer la demanda";
         
@@ -78,5 +79,21 @@ public class EmpTrans {
         return resp;
     }
     
+    //Inciso 3
+    public String buscarPlaca(String placa){
+        String resp=null;
+        int i=0;
+        while(i<totalCam){
+            if(camiones[i].getPlacas()==placa){
+                resp="El camion si esta disponible, el tipo de unidad es: " + camiones[i].getClass().getSimpleName();
+                i++;
+            }
+            else{
+                resp="No esta disponible ese camion";
+                i++;
+            }
+        }
+        return resp;
+    }
     
 }
