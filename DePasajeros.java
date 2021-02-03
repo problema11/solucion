@@ -21,21 +21,22 @@ public abstract class DePasajeros extends Camion{
         this.totalPasaj=totalPasaj;
     }
 
-    @Override
-    public String toString() {
-        return super.toString()+ "\nTotal de pasajeros: " + totalPasaj;
-    }
-
     public int getTotalPasaj() {
         return totalPasaj;
     }
 
-    
     public double calculaCostoServicio(double cantKm){ //el parametro es la cantidad de kilometros a recorrer
         return (.0001*super.getCostoCamion()/totalPasaj)*cantKm;
     }
     
-    
-    
-    
+    public String toString(){
+        StringBuilder cad=new StringBuilder();
+        
+        cad.append("\nCamion de pasajeros\n");
+        cad.append(super.toString());
+        cad.append("Total de pasajeros: "+totalPasaj+"\n");
+        
+        return cad.toString();
+    }
+
 }
