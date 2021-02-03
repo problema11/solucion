@@ -3,29 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Problema11;
+package ejercico11;
 
 import java.util.Objects;
 
 /**
  *
- * @author aldahir
+ * @author robertodelriosalgado
  */
-
 public abstract class Camion {
     private String marca;
     private String numMotor;
     private String placas;
     private double costoCamion;
-    
-    public Camion(){    
+
+    public Camion() {
     }
 
-    public Camion(String marca, String numMotor, String placas,double costoCamion) {
+    public Camion(String marca, String numMotor, String placas, double costoCamion) {
         this.marca = marca;
         this.numMotor = numMotor;
         this.placas = placas;
-        this.costoCamion=costoCamion;
+        this.costoCamion = costoCamion;
+    }
+
+    @Override
+    public String toString() {
+        return "\nCamion: " + "\nMarca: " + marca + 
+                "\nNúmero de motor: " + numMotor + "\nPlacas: " + placas+
+                "\nCosto del camión: $"+costoCamion;
     }
 
     public String getMarca() {
@@ -44,32 +50,17 @@ public abstract class Camion {
         return costoCamion;
     }
     
-    public String toString(){
-        StringBuilder cad=new StringBuilder();
-        
-        cad.append("Marca: "+marca+"\n");
-        cad.append("Numero de motor: "+numMotor+"\n");
-        cad.append("Placas: "+placas+"\n");
-        cad.append("Costo del camión: "+costoCamion+"\n");
-        
-        return cad.toString();
-    }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Camion other = (Camion) obj;
-        if (!Objects.equals(this.placas, other.placas)) {
-            return false;
-        }
-        return true;
-    }  
+        boolean resp=false;
+        if (obj!=null && obj instanceof Camion)
+            resp=((Camion) obj).placas.equalsIgnoreCase(placas);
+        return resp;
+    }
+    
+    
+    
+    
+    
 }
