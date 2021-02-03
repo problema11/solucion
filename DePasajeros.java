@@ -29,6 +29,7 @@ public abstract class DePasajeros extends Camion{
         return (.0001*super.getCostoCamion()/totalPasaj)*cantKm;
     }
     
+    @Override
     public String toString(){
         StringBuilder cad=new StringBuilder();
         
