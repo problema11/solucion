@@ -11,6 +11,7 @@ package ejercico11;
  */
 public class Escolar extends DePasajeros {
     private boolean lugarProyecto;
+    private final int maxNiños = 20; 
 
     public Escolar() {
         super();
@@ -31,10 +32,7 @@ public class Escolar extends DePasajeros {
         return (.0001*super.getCostoCamion()/super.getTotalPasaj())*250;
     }
     
-    
-    
-    
-    
-    
-    
+    public String getMaxNiños(){
+        return maxNiños;
+    }
 }
