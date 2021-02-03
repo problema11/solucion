@@ -9,9 +9,10 @@ package ejercico11;
  *
  * @author robertodelriosalgado
  */
+
 public class Escolar extends DePasajeros {
     private boolean lugarProyecto;
-    private final int maxNiños = 20; 
+    private final int MAXNINOS = 20; 
 
     public Escolar() {
         super();
@@ -22,17 +23,23 @@ public class Escolar extends DePasajeros {
         super(marca, numMotor, placas, costoCamion, totalPasaj);
         this.lugarProyecto = lugarProyecto;
     }
-
-    @Override
-    public String toString() {
-        return super.toString();
+    
+    public int getMaxNinos(){
+        return MAXNINOS;
     }
     
     public double calculaCostoServicio(){
         return (.0001*super.getCostoCamion()/super.getTotalPasaj())*250;
     }
-    
-    public int getMaxNiños(){
-        return maxNiños;
+
+    @Override
+    public String toString() {
+        StringBuilder cad=new StringBuilder();
+        
+        cad.append(super.toString());
+        cad.append("Lugar proyecto: "+lugarProyecto+"\n");
+        
+        return cad.toString();
     }
+    
 }
