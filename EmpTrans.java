@@ -21,8 +21,9 @@ public class EmpTrans {
         this.nomEmp = nomEmp;
     }
     
+    //alta de turismo
     public boolean altaCamion(String marca, String numMotor, String placas, double costoCamion, 
-            int totalPasaj, boolean asientoCama, boolean serviBar){ //alta de turismo
+            int totalPasaj, boolean asientoCama, boolean serviBar){ 
         boolean resp=false;
 
         if (totalCam<MAX){ 
@@ -35,6 +36,7 @@ public class EmpTrans {
         return resp;
     }
 
+    //alta de escolar
     public boolean altaCamion(String marca, String numMotor, String placas, double costoCamion, 
             int totalPasaj, boolean lugarProyecto){
         boolean resp=false;
