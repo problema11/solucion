@@ -11,6 +11,7 @@ import java.util.Objects;
  *
  * @author robertodelriosalgado
  */
+
 public abstract class Camion {
     private String marca;
     private String numMotor;
@@ -42,7 +43,8 @@ public abstract class Camion {
     public double getCostoCamion() {
         return costoCamion;
     }
-
+    
+    @Override
    public String toString(){
         StringBuilder cad=new StringBuilder();
         
