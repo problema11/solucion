@@ -38,7 +38,7 @@ public class Turismo extends DePasajeros{
         return costo;
     }  
     
-        @Override
+    @Override
     public String toString(){
         StringBuilder cad=new StringBuilder();
         
