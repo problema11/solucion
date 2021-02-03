@@ -5,19 +5,14 @@
  */
 package ejercico11;
 
-/**
- *
- * @author robertodelriosalgado
- */
 public class EmpTrans {
     private String nomEmp;
     private Camion[] camiones;
     private int totalCam;
-    private final int Max;
+    private final int MAX=10;
 
     public EmpTrans() {
-        Max=10;
-        camiones=new Camion[Max];
+        camiones=new Camion[MAX];
         totalCam=0;
     }
 
@@ -30,7 +25,7 @@ public class EmpTrans {
             int totalPasaj, boolean asientoCama, boolean serviBar){ //alta de turismo
         boolean resp=false;
 
-        if (totalCam<Max){ 
+        if (totalCam<MAX){ 
             camiones[totalCam]=new Turismo (marca, numMotor,placas, costoCamion, totalPasaj,
                      asientoCama, serviBar);
             totalCam++;
@@ -43,7 +38,7 @@ public class EmpTrans {
             int totalPasaj, boolean lugarProyecto){
         boolean resp=false;
 
-        if (totalCam<Max){
+        if (totalCam<MAX){
             camiones[totalCam]=new Escolar (marca, numMotor,placas, costoCamion, totalPasaj,
                      lugarProyecto);
             totalCam++;
