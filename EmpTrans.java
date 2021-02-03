@@ -51,19 +51,20 @@ public class EmpTrans {
         return resp;
     }
     
+    //inciso 1
     public String buscaTurismo(int numPasaj, double cantKm){
         StringBuilder cad=new StringBuilder();
-        int pos=-1;
         
         for (int i=0; i<totalCam; i++){
-            if(camiones[i] instanceof Turismo && ((Turismo)camiones[i]).getTotalPasaj()==numPasaj){
-                cad.append("\n"+((Turismo)camiones[i]).toString()+"\nEl costo del serivicio es: $"+
-                        ((Turismo)camiones[i]).calculaCostoServicio(cantKm));
+            if(camiones[i] instanceof Turismo && ((Turismo)camiones[i]).getTotPasajeros()>=numPasaj){
+                cad.append("\n"+((Turismo)camiones[i]).toString());
+                cad.append("\nEl costo del serivicio es: $"+((Turismo)camiones[i]).calculaCostoServicio(cantKm));
             }
         }
         if (cad.length()==0){
-            cad.append("No hay opciones para ese numero de pasajeros");
+            cad.append("No hay opciones para ese número de pasajeros");
         }
+        
         return cad.toString();
     }
     
