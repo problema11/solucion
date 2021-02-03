@@ -32,7 +32,7 @@ public class Escolar extends DePasajeros {
         return (.0001*super.getCostoCamion()/super.getTotalPasaj())*250;
     }
     
-    public String getMaxNiños(){
+    public int getMaxNiños(){
         return maxNiños;
     }
 }
