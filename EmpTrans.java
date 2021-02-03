@@ -31,7 +31,8 @@ public class EmpTrans {
             totalCam++;
             resp=true;
         }
-        return true;
+        
+        return resp;
     }
 
     public boolean altaCamion(String marca, String numMotor, String placas, double costoCamion, 
@@ -44,7 +45,8 @@ public class EmpTrans {
             totalCam++;
             resp=true;
         }
-        return true;
+        
+        return resp;
     }
     
     public String buscaTurismo(int numPasaj, double cantKm){
