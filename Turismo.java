@@ -5,10 +5,6 @@
  */
 package ejercico11;
 
-/**
- *
- * @author robertodelriosalgado
- */
 public class Turismo extends DePasajeros{
     private boolean asientoCama;
     private boolean serviBar;
@@ -23,6 +19,14 @@ public class Turismo extends DePasajeros{
         this.asientoCama = asientoCama;
         this.serviBar = serviBar;
     }
+    
+    public boolean isAsientoCama() {
+        return asientoCama;
+    }
+
+    public boolean isServiBar() {
+        return serviBar;
+    } 
     
     @Override
     public double calculaCostoServicio(double cantKm){
