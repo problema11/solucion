@@ -5,11 +5,6 @@
  */
 package ejercico11;
 
-/**
- *
- * @author robertodelriosalgado
- */
-
 public class Escolar extends DePasajeros {
     private boolean lugarProyecto;
     private final int MAXNINOS = 20; 
