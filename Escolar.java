@@ -7,7 +7,6 @@ package ejercico11;
 
 public class Escolar extends DePasajeros {
     private boolean lugarProyecto;
-    private final int MAXNINOS = 20; 
 
     public Escolar() {
         super();
@@ -19,8 +18,8 @@ public class Escolar extends DePasajeros {
         this.lugarProyecto = lugarProyecto;
     }
     
-    public int getMaxNinos(){
-        return MAXNINOS;
+    public int getTotPasajeros(){
+        return super.getTotPasajeros();
     }
     
     public boolean isLugarProyecto() {
