@@ -7,11 +7,6 @@ package ejercico11;
 
 import java.util.Objects;
 
-/**
- *
- * @author robertodelriosalgado
- */
-
 public abstract class Camion {
     private String marca;
     private String numMotor;
