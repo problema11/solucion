@@ -18,6 +18,7 @@ public class Escolar extends DePasajeros {
         this.lugarProyecto = lugarProyecto;
     }
     
+     @Override
     public int getTotPasajeros(){
         return super.getTotPasajeros();
     }
