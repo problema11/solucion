@@ -28,6 +28,10 @@ public class Escolar extends DePasajeros {
         return MAXNINOS;
     }
     
+    public boolean isLugarProyecto() {
+        return lugarProyecto;
+    }
+    
     public double calculaCostoServicio(){
         return (.0001*super.getCostoCamion()/super.getTotalPasaj())*250;
     }
