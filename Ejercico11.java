@@ -5,18 +5,11 @@
  */
 package ejercico11;
 
-/**
- *
- * @author robertodelriosalgado
- */
 public class Ejercico11 {
-
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
         EmpTrans emp=new EmpTrans ("El rápido");
+        
         emp.altaCamion("Mercedes", "5432g", "d355", 500000, 20, true, true);
         emp.altaCamion("Mercedes", "54324g", "d3545", 5000000, 40, true, false);
         emp.altaCamion("audi", "543gt", "t564", 200000, 30, true);
