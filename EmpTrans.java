@@ -100,6 +100,22 @@ public class EmpTrans {
         }
         return resp;
     }
+        
+    //inciso 4
+    public String camionesEscolaresDisponibles(){
+        StringBuilder cad= new StringBuilder();
+        
+        for(int i=0;i<totalCam;i++){
+            if(camiones[i]instanceof Escolar){
+                if(((Escolar)camiones[i]).getTotPasajeros()>=20){
+                    if(((Escolar)camiones[i]).isLugarProyecto())
+                        cad.append(camiones[i].getPlacas()+"\t");
+                }
+            }
+        }
+        
+        return cad.toString();
+    }
     
     //Inciso 5
     public int totalMarcaTurismo (String marca, double costoBar, double cantKM, double cantX){
