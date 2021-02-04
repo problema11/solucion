@@ -101,4 +101,12 @@ public class EmpTrans {
         return resp;
     }
     
+    //Inciso 5
+    public int totalMarcaTurismo (String marca, double costoBar, double cantKM){
+        int total=0;
+        int i=0;
+        
+        while(i<totalCam)
+            if(camiones[i] instanceof Turismo && ((Turismo)camiones[i]).get
+    
 }
