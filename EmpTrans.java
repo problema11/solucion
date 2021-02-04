@@ -74,13 +74,14 @@ public class EmpTrans {
         String resp="No es posible satisfacer la demanda";
         
         for(int i=0; i<totalCam; i++){
-            if(camiones[i] instanceof Escolar && ((Escolar)camiones[i]).getMaxNinos()>=cantCamiones){
+            if(camiones[i] instanceof Escolar && ((Escolar)camiones[i]).getTotPasajeros()>=totalNinos){
                 contador++;
             }
         }
         if(contador>=cantCamiones){
             resp="Si es posible satisfacer la demanda";
         }
+        
         return resp;
     }
     
