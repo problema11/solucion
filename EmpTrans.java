@@ -107,6 +107,6 @@ public class EmpTrans {
         int i=0;
         
         while(i<totalCam)
-            if(camiones[i] instanceof Turismo && ((Turismo)camiones[i]).get
+            if(camiones[i] instanceof Turismo && ((Turismo)camiones[i]).getMarca().equals(marca) && 
     
 }
