@@ -116,18 +116,20 @@ public class EmpTrans {
         return cad.toString();
     }
     
-    //Inciso 5
-    public int totalMarcaTurismo (String marca, double costoBar, double cantKM, double cantX){
+    //inciso 5
+    public int totalMarcaTurismo (String marca, double cantKM, double cantX){
         int total=0;
-        int i=0;
         
-        while(i<totalCam)
-            if(camiones[i] instanceof Turismo && ((Turismo)camiones[i]).getMarca().equals(marca) && ((Turismo)camiones[i]).serviBar() == true && ((Turismo)camiones[i]).calculaCostoServicio(cantKM)<cantX){
-                total++;
-                i++;
-            }
+        for(int i=0;i<totalCam;i++){
+            if(camiones[i]instanceof Turismo && camiones[i].getMarca().equalsIgnoreCase(marca))
+                if(((Turismo)camiones[i]).isServiBar())
+                    if(((Turismo)camiones[i]).calculaCostoServicio(cantKM)<=cantX)
+                        total++;       
+        }
+        
         return total;
     }
+
             
     
 }
