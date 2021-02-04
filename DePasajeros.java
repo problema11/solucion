@@ -5,10 +5,6 @@
  */
 package ejercico11;
 
-/**
- *
- * @author robertodelriosalgado
- */
 public abstract class DePasajeros extends Camion{
     private int totalPasaj;
 
