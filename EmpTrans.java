@@ -86,18 +86,17 @@ public class EmpTrans {
     
     //Inciso 3
     public String buscarPlaca(String placa){
-        String resp=null;
+        String resp;
         int i=0;
-        while(i<totalCam){
-            if(camiones[i].getPlacas()==placa){
-                resp="El camion si esta disponible, el tipo de unidad es: " + camiones[i].getClass().getSimpleName();
-                i++;
-            }
-            else{
-                resp="No esta disponible ese camion";
-                i++;
-            }
+        
+        while(i<totalCam && camiones[i].getPlacas()!=placa ){
+            i++;
         }
+        if(i!=totalCam)
+            resp="El camion esta disponible, el tipo de unidad es: "+ camiones[i].getClass().getSimpleName();
+        else
+            resp="No esta disponible ese camion";
+            
         return resp;
     }
         
